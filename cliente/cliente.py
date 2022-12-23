@@ -26,7 +26,7 @@ def descargarArchivo():
      servidor.send_multipart([contenidoArchivoVa.encode("utf-8"),opcion.encode("utf-8"),nombreAsig.encode("utf-8")])
      data=servidor.recv_multipart()
      with open(nombreAsig, "wb") as f:
-                f.write(data)
+                f.write(data[0])
     
 while bandera!=False:
 
